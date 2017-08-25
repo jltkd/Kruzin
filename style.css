@@ -1,0 +1,120 @@
+/*
+
+Theme Name: Pro &ndash; Child Theme
+Theme URI: http://theme.co/pro/
+Author: Themeco
+Author URI: http://theme.co/
+Description: Make all of your modifications to Pro in this child theme.
+Version: 1.0.0
+Template: pro
+
+*/
+
+/*** GENERAL ***/
+body { overflow: hidden; }
+h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6 { margin: 0; padding: 0; }
+
+/*** MENU ***/
+.hm10.x-menu > li:last-child > .x-anchor { border-right: 2px solid #fff; }
+.hm7.x-menu > li > .x-anchor .x-anchor-text-primary { font-weight: bold!important; }
+
+/*** STRUCTURE ***/
+.x-boxed-layout-active .entry-wrap { border: none; }
+.x-boxed-layout-active .site, .x-boxed-layout-active .x-site { background-color: transparent!important; border: none; box-shadow: none; }
+.x-btn, .button, [type="submit"] { border-color: #ce3527!important; background-color: #ce3527!important; text-shadow: none!important; }
+.x-btn.small { font-size: .8rem; padding: 5px; }
+.toppush { margin-top: 25px; }
+html { background-image: url(http://184.175.101.117/~kruzinusa/wp-content/uploads/2017/04/UPDATED-flagbackground.jpg); background-size: cover; }
+
+/*** PAGES ***/
+.slogan h1 { color: #fff; }
+.homeblog { border-radius: 15px; }
+.shakin { font-size: 2rem; color: #fff; margin-bottom: 15px; }
+.featuredhomepost { padding-top: 32px; }
+.ponygirl { float: right; max-width: 147px; margin-top: -50px; }
+.featuresection { background-color: #fff; border-radius: 15px; padding: 15px; margin-bottom: 25px; }
+.x-container.max.width.offset { background-color: #fff; border-radius: 15px; margin-top: 40px; }
+.home .x-container.max.width.offset { background-color: transparent; }
+.entry-wrap { padding: 0; background-color: transparent; border-radius: 0; box-shadow: none; }
+.whitebg { background-color: #fff; border-radius: 10px; padding: 20px; }
+.featuredbuilder { padding-bottom: 15px; margin-bottom: 15px; border-bottom: 1px solid gainsboro; overflow: hidden; }
+.featuredbuilder:after { content: ""; display: table; clear: both; }
+h1.featuretitle { font-size: 2rem!important; }
+h2.featuretitle { border-top: 1px solid gainsboro; font-size: 1.7rem; padding-top: 20px; }
+.featuredbuilder h1 { font-size: 3rem; margin-bottom: 10px; color: #262626; }
+.featuretitle { margin: 0; padding: 0; color: #CE3627; }
+.archivelist { display: flex; padding-top: 30px; }
+.profilepre { width: 100%; position: relative; text-align: center; }
+.profilepre img { width: 100%; height: auto; max-height: 158px; }
+.profilepre.featured img { width: 100%; height: auto; max-height: 218px; }
+.profilepre p { padding: 5px 10px; margin: 0 auto; color: #000; width: 100%; font-weight: bold; line-height: 16px; }
+.x-block-grid { width: 100%; }
+.post { padding: 40px; }
+article#Blog-Page { background-color: #fff; padding: 40px; border-radius: 15px; }
+.x-comments-area, .p-meta { display: none; }
+.single .entry-title { margin: 0 0 25px 0; }
+.hint { margin: 7px 0; }
+.wp-pagenavi { text-align: center; padding-top: 30px; }
+.single-envira .x-container.max.width.offset { padding: 40px; }
+a.prev-next.hidden-phone { color: #fff; }
+#yottie_1 .yottie-widget-nav { display: none; }
+.page-id-26 p { margin: 0 0 .5em; }
+.envira-gallery-wrap .envira-album-title { text-align: left!important; line-height: 14px!important; font-size: 14px!important; font-weight: bold; color: #000; }
+.builder-gallery li { display: inline-block; margin: 5px; }
+.more-link { display: none; }
+.homeblogtitle { display: inline; margin-right: 5px; }
+.featuredhomepost p { margin: -20px 0 26px 0; font-size: .9rem; }
+.builderheader { display: flex; justify-content: space-between; align-items: center; }
+.profilepre a { display: flex; flex-direction: column; justify-content: space-around; height: 250px; }
+#cff .cff-album-item .cff-album-info { display: none!important; }
+.esg-bc { display: none; }
+h1:after {
+    border-bottom: 2px solid black;
+    content: " ";
+    display: inline-block;
+    height: 20px;
+    margin-left: -8px;
+    width: 100px;
+}
+.home h1:after { border-color: #fff; }
+.x-masthead h1:after { border-bottom: none; }
+.hm13.x-menu > li > .x-anchor .x-anchor-text-primary { font-weight: 700!important; }
+
+/*** SEARCH FORM ***/
+.searchandfilter { flex-grow: 0.4; margin: 0; }
+.searchandfilter ul { display: flex; justify-content: space-between; align-items: center; margin-left: 0; }
+.searchandfilter ul li { padding: 0; }
+.searchandfilter input[type="text"], .searchandfilter select { margin-bottom: 0; }
+.searchandfilter input[type="submit"] { padding: 5px!important; }
+.searchandfilter li.sf-field-sort_order { flex-grow: .6; }
+a.search-filter-reset { background-color: #fff; padding: 5px; }
+.searchfilter { display: flex; background-color: #d6d6d6; justify-content: space-around; align-items: center; padding: 10px 0; }
+.searchfilter h2 { font-size:1.3rem; font-family: roboto; color: #000; }
+
+/*** GALLERIES ***/
+.envira-gallery-wrap .envira-pagination { text-align: center; }
+.page-numbers {
+    color: #999;
+    border: 1px solid #e5e5e5!important;
+    line-height: 38px!important;
+    border-radius: 5px!important;
+    font-size: 12px!important;
+    font-weight: 700;
+    font-family: "Open Sans",sans-serif;
+    display: inline-block;
+    background: #fff!important;
+    margin-bottom: 5px!important;
+    padding: 0 16px!important;
+}
+.current {
+    background-color: #fff;
+    border-color: #bbb!important;
+    color: #333;
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.13)!important;
+}
+.envira-gallery-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 250px;
+}
