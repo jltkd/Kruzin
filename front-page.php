@@ -23,7 +23,7 @@
 	            <h1 class="shakin">What's Shakin?</h1>
 	            </div>
 	            <div class="x-column x-1-2 whitebg">
-	            		<?php $the_query = new WP_Query('posts_per_page=1'); ?>
+                    <?php $the_query = new WP_Query('posts_per_page=1'); ?>
           			<?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
           				<div class="featuredhomepost">
           				<a href="<?php the_permalink(); ?>">
