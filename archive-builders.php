@@ -16,15 +16,18 @@
     $loop = new WP_Query($args);
 
     $args2 = array(
-        'post_type' => 'builders',
-        'orderby'     => 'title',
-        'order'         => 'ASC',
+        'post_type'      => 'builders',
+        'orderby'        => 'title',
+        'order'          => 'ASC',
         'posts_per_page' => 30,
+        'meta_query'     => array(
+
+        )
     );
     $loop2 = new WP_Query($args2);
 ?>
 
-<div class="x-container max width offset">
+<div class="x-container max width offset pushdown">
     <div class="x-column x-2-3">
         <h1 class="shakin">Featured Builders</h1>
     </div>
@@ -33,10 +36,10 @@
     </div>
 </div>
 
-<div class="x-container max width offset">
+<div class="x-container max width offset pushup">
     <div class="entry-wrap">
-        <div class="x-column x-2-3 whitebg">
-            <div class="archivelist">
+        <div class="x-column x-2-3">
+            <div class="archivelist whitebg">
                 <ul class=" x-block-grid three-up">
                     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
                         <li class="x-block-grid-item">
@@ -54,6 +57,10 @@
                     <?php endwhile; ?>
                 </ul>
             </div>
+            <div class="whitebg probuilder">
+                <h1>Professional Builder?</h1>
+                <p>Wanna run with the big dogs with a (FREE) Builders Showroom Click Here</p>
+            </div>
         </div>
         <div class="x-column x-1-3 whitebg">
             <ul>
@@ -65,6 +72,7 @@
                     </li>
                 <?php endwhile; ?>
             </ul>
+            <a href="#">A-H</a>
         </div>
     </div>
 </div>

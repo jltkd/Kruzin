@@ -27,7 +27,7 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6 { margin: 0; padding: 0; }
 html { background-image: url(http://184.175.101.117/~kruzinusa/wp-content/uploads/2017/04/UPDATED-flagbackground.jpg); background-size: cover; }
 
 /*** PAGES ***/
-.slogan h1 { color: #fff; }
+.slogan h1 { color: #fff; position: relative; top: 9px; }
 .homeblog { border-radius: 15px; }
 .shakin { font-size: 2rem; color: #fff; margin-bottom: 15px; }
 .featuredhomepost { padding-top: 32px; }
@@ -35,6 +35,8 @@ html { background-image: url(http://184.175.101.117/~kruzinusa/wp-content/upload
 .featuresection { background-color: #fff; border-radius: 15px; padding: 15px; margin-bottom: 25px; }
 .x-container.max.width.offset { border-radius: 15px; margin-top: 40px; }
 .home .x-container.max.width.offset { background-color: transparent; }
+.hometitle, .noline { color: #fff; font-size: 1.4rem; margin-bottom: 10px; }
+h1.noline::after { display: none; }
 .entry-wrap { padding: 0; background-color: transparent; border-radius: 0; box-shadow: none; }
 .whitebg { background-color: #fff; border-radius: 10px; padding: 20px; }
 .featuredbuilder { padding-bottom: 15px; margin-bottom: 15px; border-bottom: 1px solid gainsboro; overflow: hidden; }
@@ -65,7 +67,7 @@ a.prev-next.hidden-phone { color: #fff; }
 .homeblogtitle { display: inline; margin-right: 5px; }
 .featuredhomepost p { margin: -20px 0 26px 0; font-size: .9rem; }
 .builderheader { display: flex; justify-content: space-between; align-items: center; }
-.profilepre a { display: flex; flex-direction: column; justify-content: space-around; height: 250px; }
+.profilepre a { display: flex; flex-direction: column; justify-content: space-around; height: 200px; }
 #cff .cff-album-item .cff-album-info { display: none!important; }
 .esg-bc { display: none; }
 h1:after {
@@ -79,6 +81,12 @@ h1:after {
 .home h1:after { border-color: #fff; }
 .x-masthead h1:after { border-bottom: none; }
 .hm13.x-menu > li > .x-anchor .x-anchor-text-primary { font-weight: 700!important; }
+.pushup { margin-top: 0!important; }
+.pushdown { margin-bottom: 0; }
+.probuilder { margin-top: 30px; text-align: center; }
+.probuilder h1 { font-size: 2rem; }
+.maintitle { color: #fff; font-size: 2.5rem; margin-bottom: 20px; }
+.maintitle::after { border-color: #fff; }
 
 /*** SEARCH FORM ***/
 .searchandfilter { flex-grow: 0.4; margin: 0; }
@@ -89,7 +97,7 @@ h1:after {
 .searchandfilter li.sf-field-sort_order { flex-grow: .6; }
 a.search-filter-reset { background-color: #fff; padding: 5px; }
 .searchfilter { display: flex; background-color: #d6d6d6; justify-content: space-around; align-items: center; padding: 10px 0; }
-.searchfilter h2 { font-size:1.3rem; font-family: roboto; color: #000; }
+.searchfilter h2 { font-size:1.3rem; font-family: roboto, sans-serif; color: #000; }
 
 /*** GALLERIES ***/
 .envira-gallery-wrap .envira-pagination { text-align: center; }

@@ -4,7 +4,8 @@
 <div class="x-container max width offset">
   <div class="<?php x_main_content_class(); ?>" role="main">
     <div class="x-container max width">
-      <div class="entry-wrap">
+        <h1 class="maintitle"><?php the_title(); ?></h1>
+      <div class="entry-wrap whitebg">
         <?php while ( have_posts() ) : the_post(); ?>
           <div class="x-container max width">
           <hr class="x-gap">
@@ -18,7 +19,6 @@
               <img src="<?php the_field('logo'); ?>" alt="<?php the_title(); ?>">
               <p><?php the_field('address'); ?><br>
               <?php the_field('city'); ?>, <?php the_field('state'); ?> <?php the_field('zip_code'); ?></p>
-              <h4><?php the_title(); ?></h4>
               <p><?php the_field('phone_number'); ?></p>
               <p><a href="<?php the_field('website_url'); ?>" target="_blank">Visit Our Website</a></p>
               <?php if ( is_user_logged_in() ): ?>
@@ -102,7 +102,7 @@
                 if(get_field('youtube_link'))
                 {
                   $yt = get_field('youtube_link');
-                  echo do_shortcode("[yottie debug=true content header_visible=false content_gutter=10 video_layout=cinema content_direction=vertical  content_columns=3 content_rows=2 channel=\"https://www.youtube.com/channel/$yt\"]");
+                  echo do_shortcode("[yottie debug=true content header_visible=false content_gutter=10 popup_info=null video_layout=cinema content_direction=vertical  content_columns=3 content_rows=2 channel=\"https://www.youtube.com/channel/$yt\"]");
                 } else {
                   echo '<p>We haven\'t added our YouTube Feed yet!</p>';
                 }

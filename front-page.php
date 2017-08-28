@@ -37,42 +37,54 @@
           			<?php endwhile; wp_reset_postdata(); ?>
 	            </div>
 		<div class="x-column x-1-2 homefeatured">
-			 <div class="x-column x-1-2 whitebg">
+			 <div class="x-column x-1-2">
+                 <h1 class="noline">Builders Showrooms</h1>
+                 <div class="whitebg">
 	            		<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 			             <div class="profilepre featured">
 			             	<a href="http://184.175.101.117/~kruzinusa/builders/">
 			                  	<img src="<?php the_field('featured_image'); ?>" alt="<?php $titlesummary = the_title(); echo wp_trim_words($titlesummary, 10); ?>">
-			                	<p>Builders Showrooms</p>
+                                <p>See the latest builds from some of the best around!
+                                    Click Here</p>
 			              	</a>
 			              </div>
 		          <?php endwhile; ?>
+                 </div>
 	            </div>
-	            <div class="x-column x-1-2 last whitebg">
+	            <div class="x-column x-1-2 last">
+                    <h1 class="hometitle">Vendors Mall</h1>
+                    <div class="whitebg">
 		            	<?php while ( $vendorloop->have_posts() ) : $vendorloop->the_post(); ?>
 					<div class="profilepre featured">
 						<a href="http://184.175.101.117/~kruzinusa/vendors/">
 						<img src="<?php the_field('featured_image'); ?>" alt="<?php $titlesummary = the_title(); echo wp_trim_words($titlesummary, 10); ?>">
-				             <p>Vendors Mall</p>
+                            <p>We scour the web for the best videos of wheelies, burnouts, cackle fests, and more!
+                                Hold on tight and enjoy the ride!</p>
 				             </a>
 			            </div>
 		            	<?php endwhile; ?>
+                    </div>
 	            </div>
 	            <div class="x-clear"></div>
-	            <div class="x-column x-1-2 toppush whitebg">
+	            <div class="x-column x-1-2 toppush">
+                    <h1 class="hometitle">Galleries</h1>
+                    <div class="whitebg">
 	            		<div class="profilepre featured">
 					<a href="http://184.175.101.117/~kruzinusa/gallery/">
 					<img src="http://184.175.101.117/~kruzinusa/wp-content/uploads/2017/08/IMG_2992_0.jpg" alt="car">
-			             <p>Galleries</p>
 			             </a>
 		            	</div>
+                    </div>
 	            </div>
-	            <div class="x-column x-1-2 toppush whitebg">
+	            <div class="x-column x-1-2 toppush">
+                    <h1 class="hometitle">Event Coverage</h1>
+                    <div class="whitebg">
 	            		<div class="profilepre featured">
 					<a href="http://184.175.101.117/~kruzinusa/show/">
 					<img src="http://184.175.101.117/~kruzinusa/wp-content/uploads/2017/08/Classic-Car-Studio-1955-Chevy-Nomad-Art-Boze-GONE-MAD-01.jpg" alt="car">
-			             <p>Event Coverage</p>
 			             </a>
 		            	</div>
+                    </div>
 	            </div>
 		</div>
 		</div>
