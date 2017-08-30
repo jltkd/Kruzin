@@ -25,14 +25,15 @@
         )
     );
     $loop2 = new WP_Query($args2);
+
 ?>
 
 <div class="x-container max width offset pushdown">
     <div class="x-column x-2-3">
-        <h1 class="shakin">Featured Builders</h1>
+        <h1 class="maintitle">Featured Builders</h1>
     </div>
     <div class="x-column x-1-3">
-        <h1 class="shakin">Builders A-Z</h1>
+        <h1 class="maintitle">Builders A-Z</h1>
     </div>
 </div>
 
@@ -72,9 +73,17 @@
                     </li>
                 <?php endwhile; ?>
             </ul>
-            <a href="#">A-H</a>
+            <a href="http://184.175.101.117/~kruzinusa/athruh/">A-H</a>
+            <a href="http://184.175.101.117/~kruzinusa/ithrup/">I-P</a>
+            <a href="http://184.175.101.117/~kruzinusa/qthruz/">Q-Z</a>
         </div>
     </div>
 </div>
+
+<?php if ( $loop3->have_posts() ) : while ( $loop3->have_posts() ) : $loop3->the_post(); ?>
+    <?php the_title(); ?>
+<?php endwhile; wp_reset_postdata(); else : ?>
+    <p>nothing</p>
+<?php endif; ?>
 
 <?php get_footer(); ?>

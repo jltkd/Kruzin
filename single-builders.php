@@ -118,3 +118,5 @@
 </div>
 
 <?php get_footer(); ?>
+
+[custom-facebook-feed videosource=videospage videocols=4 showvideodesc=false]
