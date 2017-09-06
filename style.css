@@ -37,9 +37,9 @@ html { background-image: url(http://184.175.101.117/~kruzinusa/wp-content/upload
 .home .x-container.max.width.offset { background-color: transparent; }
 .hometitle, .noline { color: #fff; font-size: 1.4rem; margin-bottom: 10px; }
 h1.noline::after { display: none; }
-.entry-wrap { padding: 0; background-color: transparent; border-radius: 0; box-shadow: none; }
-.whitebg, .entry-wrap { background-color: #fff; border-radius: 10px; padding: 20px; }
-.home .entry-wrap, .post-type-archive-builders .entry-wrap { background-color: transparent; }
+.entry-wrap { padding: 0; background-color: transparent; border-radius: 0; box-shadow: none!important; }
+.whitebg, .entry-wrap,  .has-post-thumbnail .entry-wrap { background-color: #fff; border-radius: 10px!important; padding: 20px; }
+.home .entry-wrap, .post-type-archive-builders .entry-wrap, .single-builders .entry-wrap { background-color: transparent; }
 .featuredbuilder { padding-bottom: 15px; margin-bottom: 15px; border-bottom: 1px solid gainsboro; overflow: hidden; }
 .featuredbuilder:after { content: ""; display: table; clear: both; }
 h1.featuretitle { font-size: 2rem!important; }
@@ -50,7 +50,7 @@ h2.featuretitle { border-top: 1px solid gainsboro; font-size: 1.7rem; padding-to
 .profilepre { width: 100%; position: relative; text-align: center; }
 .profilepre img { width: 100%; height: auto; max-height: 158px; }
 .profilepre.featured img { width: 100%; height: auto; max-height: 218px; }
-.profilepre p { padding: 5px 10px; margin: 0 auto; color: #000; width: 100%; font-weight: bold; line-height: 16px; }
+.profilepre p { padding: 10px; margin: 0 auto; color: #000; width: 100%; line-height: 16px; }
 .x-block-grid { width: 100%; }
 .post { padding: 40px; }
 article#Blog-Page { background-color: #fff; padding: 40px; border-radius: 15px; }
@@ -68,7 +68,7 @@ a.prev-next.hidden-phone { color: #fff; }
 .homeblogtitle { display: inline; margin-right: 5px; }
 .featuredhomepost p { margin: -20px 0 26px 0; font-size: .9rem; }
 .builderheader { display: flex; justify-content: space-between; align-items: center; }
-.profilepre a { display: flex; flex-direction: column; justify-content: space-around; height: 200px; }
+.profilepre a { display: flex; flex-direction: column; justify-content: space-around; }
 #cff .cff-album-item .cff-album-info { display: none!important; }
 .esg-bc { display: none; }
 h1:after {
@@ -89,6 +89,24 @@ h1:after {
 .maintitle { color: #fff; font-size: 2.5rem; margin-bottom: 20px; }
 .maintitle::after { border-color: #fff; }
 .cff-item { border-bottom: none!important; }
+.description p:not(:first-child) { display: none; }
+.fullbio { display: none; margin-top: 20px; }
+.morebio:hover { cursor: pointer; }
+.center { text-align: center; line-height:20px; }
+.center img { margin-bottom: 10px; }
+.galleryimg { margin-top: 20px;}
+.builderblock { min-height: 270px; }
+.builder-gallery { margin: 0; display: flex; flex-wrap: wrap; }
+.builder-gallery li { list-style: none; margin: 2px; }
+.x-container.max.width.offset.test .x-container.max.width.offset { margin: 0; padding: 0; width: 100%; }
+.featuredhomepost h6 { margin-top: -36px; margin-bottom: 17px; }
+.builderlist h2 { font-size: 2rem; }
+.x-container .x-container.width { width: 100%; }
+.cff-lightbox-dataContainer { display: none!important; }
+.alphalinks { display: flex; justify-content: space-evenly; }
+.alphalinks a { font-family: "Oleo Script",display; font-size: 1.3rem; }
+.alphalinks.white a { color: #fff; }
+.bloggraphic { position: absolute; right: -67px; top: -106px; }
 
 /*** SEARCH FORM ***/
 .searchandfilter { flex-grow: 0.4; margin: 0; }

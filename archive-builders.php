@@ -38,7 +38,7 @@
 </div>
 
 <div class="x-container max width offset pushup">
-    <div class="entry-wrap">
+    <div class="<?php x_main_content_class(); ?>" role="main">
         <div class="x-column x-2-3">
             <div class="archivelist whitebg">
                 <ul class=" x-block-grid three-up">
@@ -63,7 +63,8 @@
                 <p>Wanna run with the big dogs with a (FREE) Builders Showroom Click Here</p>
             </div>
         </div>
-        <div class="x-column x-1-3 whitebg">
+        <div class="x-column x-1-3 whitebg builderlist">
+            <h2>A-H</h2>
             <ul>
                 <?php while ( $loop2->have_posts() ) : $loop2->the_post(); ?>
                     <li>
@@ -73,17 +74,14 @@
                     </li>
                 <?php endwhile; ?>
             </ul>
-            <a href="http://184.175.101.117/~kruzinusa/athruh/">A-H</a>
-            <a href="http://184.175.101.117/~kruzinusa/ithrup/">I-P</a>
-            <a href="http://184.175.101.117/~kruzinusa/qthruz/">Q-Z</a>
+            <div class="alphalinks">
+                <a href="http://184.175.101.117/~kruzinusa/athruh/">A-H</a>
+                <a href="http://184.175.101.117/~kruzinusa/ithruo/">I-O</a>
+                <a href="http://184.175.101.117/~kruzinusa/pthruu/">P-U</a>
+                <a href="http://184.175.101.117/~kruzinusa/vthruz/">V-Z</a>
+            </div>
         </div>
     </div>
 </div>
-
-<?php if ( $loop3->have_posts() ) : while ( $loop3->have_posts() ) : $loop3->the_post(); ?>
-    <?php the_title(); ?>
-<?php endwhile; wp_reset_postdata(); else : ?>
-    <p>nothing</p>
-<?php endif; ?>
 
 <?php get_footer(); ?>

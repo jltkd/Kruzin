@@ -1,13 +1,18 @@
 <?php get_header(); ?>
 
-<div class="x-container max width offset">
+<div class="x-container max width offset pushdown">
+    <div class="x-column x-2-3">
+        <h1 class="maintitle">Featured Vendors</h1>
+    </div>
+</div>
+
+<div class="x-container max width offset pushup">
     <div class="<?php x_main_content_class(); ?>" role="main">
-        <div class="x-container max width offset">
+        <div class="x-container max width offset pushup">
             <div class="entry-wrap">
                 <div class="entry-content content">
                     <div class="featuredbuilder">
                         <div class="builderheader">
-                            <h1 class="featuretitle">Featured Vendors</h1>
                             <div class="droplink"><a href="#allbuilders">View All Vendors A-Z</a></div>
                         </div>
                         <?php

@@ -4,37 +4,37 @@
 <div class="x-container max width offset">
   <div class="<?php x_main_content_class(); ?>" role="main">
     <div class="x-container max width">
-        <h1 class="maintitle"><?php the_title(); ?></h1>
-      <div class="entry-wrap whitebg">
+      <div class="entry-wrap">
         <?php while ( have_posts() ) : the_post(); ?>
           <div class="x-container max width">
-          <hr class="x-gap">
-          <hr class="x-gap">
             <!-- <div class="x-column x-sm x-1-1">
               <?php if( get_field('featured_builder') ): ?>
                 <p>THIS IS A FEATURED BUILDER</p>
               <?php endif; ?>
             </div> -->
-            <div class="x-column x-sm x-1-3">
-              <img src="<?php the_field('logo'); ?>" alt="<?php the_title(); ?>">
-              <p><?php the_field('address'); ?><br>
-              <?php the_field('city'); ?>, <?php the_field('state'); ?> <?php the_field('zip_code'); ?></p>
-              <p><?php the_field('phone_number'); ?></p>
-              <p><a href="<?php the_field('website_url'); ?>" target="_blank">Visit Our Website</a></p>
-              <?php if ( is_user_logged_in() ): ?>
-                <a href="<?php echo get_permalink(); ?>/edit-builder?post_id=<?php echo $post->ID ?>">Edit Profile</a>
-              <?php endif; ?>
-            </div>
-            <div class="x-column x-sm x-2-3">
-              <?php the_field('description'); ?>
-            </div>
+              <h1 class="maintitle"><?php the_title(); ?></h1>
+              <div class="x-column x-1-1 whitebg builderinfo">
+                  <div class="x-column x-1-4">
+                      <img src="<?php the_field('logo'); ?>" alt="<?php $titlesummary = the_title(); ?>">
+                  </div>
+                  <div class="x-column x-1-4">
+                      <p><?php the_field('address'); ?><br>
+                          <?php the_field('city'); ?>, <?php the_field('state'); ?> <?php the_field('zip_code'); ?><br>
+                          <?php the_field('phone_number'); ?><br>
+                          <a href="<?php the_field('website_url'); ?>" target="_blank">Visit Our Website</a><br>
+                          <b class="morebio">Read Full Bio</b>
+                  </div>
+                  <div class="x-column x-1-4"></div>
+                  <div class="x-column x-1-4"></div>
+              </div>
           </div>
-          <div class="x-container max width">
-            <!-- <ul class="firstActive">
-              <li>Hello</li>
-              <li>Hi </li>
-              <li>Heyy!</li>
-            </ul> -->
+          <div class="x-container max width whitebg fullbio">
+           <?php the_field('description'); ?>
+              <b class="morebio">Close Full Bio</b>
+          </div>
+            <div class="x-gap"></div>
+            <h1 class="maintitle">Gallery</h1>
+          <div class="x-container max width whitebg galleryimg">
             <ul class="x-nav x-nav-tabs four-up top firstActive" data-x-element="tab_nav" data-x-params="{&quot;orientation&quot;:&quot;horizontal&quot;}">
             <?php if(get_field('gallery')) : ?>
               <li class="x-nav-tabs-item resizez"><a data-cs-tab-toggle="1">Gallery</a></li>
@@ -74,8 +74,7 @@
                   if(get_field('facebook_link'))
                   {
                     $fb = get_field('facebook_link');
-                    echo do_shortcode("[custom-facebook-feed id=$fb num=99 type=photos photosource=photospage photocols=4]");
-                    echo $fb;
+                    echo do_shortcode("[custom-facebook-feed id=$fb num=20 layout=thumb photosource=photospage showfacebooklink=false masonry=true layout=fullwidth lightboxcomments=false type=photos,videos]");
                   } else {
                     echo '<p>We haven\'t added our Facebook Feed yet!</p>';
                   }
@@ -88,8 +87,7 @@
                   if(get_field('instagram_link'))
                   {
                     $ig = get_field('instagram_link');
-                    echo do_shortcode("[instashow source=\"@$ig\" auto_hover_pause\"true\" rows=\"2\" gutter=\"5\"  auto=\"4000\"]");
-                    echo $ig;
+                    echo do_shortcode("[instashow source=\"@$ig\" info=\"none\" popup_info=\"none\" auto_hover_pause\"true\" rows=\"2\" gutter=\"5\"  auto=\"4000\"]");
                   } else {
                     echo '<p>We haven\'t added our Instagram Feed yet!</p>';
                   }
@@ -117,6 +115,12 @@
   </div>
 </div>
 
-<?php get_footer(); ?>
+    <script>
+        jQuery(document).ready(function() {
+           jQuery(".morebio").click(function() {
+               jQuery(".fullbio").stop().slideToggle();
+           }) ;
+        });
+    </script>
 
-[custom-facebook-feed videosource=videospage videocols=4 showvideodesc=false]
+<?php get_footer(); ?>
